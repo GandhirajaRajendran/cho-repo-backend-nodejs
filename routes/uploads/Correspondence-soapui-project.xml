@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="d28ef574-76a2-46af-a9d3-c1c1914c86b1" activeEnvironment="Default" name="Correspondence" resourceRoot="" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="1293f14a-a53f-408b-b794-62db29d9bcaa" wsaVersion="NONE" name="CorrespondenceServiceStronglyTypedTypePortBinding" type="wsdl" bindingName="{http://healthedge.com}CorrespondenceServiceStronglyTypedTypePortBinding" soapVersion="1_1" anonymous="optional" definition="http://172.23.9.146:9191/connector/services/classic/CorrespondenceServiceStronglyTyped?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://172.23.9.146:9191/connector/services/classic/CorrespondenceServiceStronglyTyped?wsdl"><con:part><con:url>http://172.23.9.146:9191/connector/services/classic/CorrespondenceServiceStronglyTyped?wsdl</con:url><con:content><![CDATA[<definitions name="CorrespondenceServiceStronglyTyped" targetNamespace="http://healthedge.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://healthedge.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://healthedge.com" schemaLocation="http://172.23.9.146:9191/connector/services/classic/CorrespondenceServiceStronglyTyped?xsd=CorrespondenceServiceStronglyTyped_schema1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="getCorrespondenceResponse">
+    <part element="tns:getCorrespondenceResponse" name="parameters"></part>
+  </message>
+  <message name="updateStatusAndDescriptionResponse">
+    <part element="tns:updateStatusAndDescriptionResponse" name="parameters"></part>
+  </message>
+  <message name="UpdateFailedException">
+    <part element="tns:UpdateFailedException" name="fault"></part>
+  </message>
+  <message name="updateStatusAndDescription">
+    <part element="tns:updateStatusAndDescription" name="parameters"></part>
+  </message>
+  <message name="updateStatus">
+    <part element="tns:updateStatus" name="parameters"></part>
+  </message>
+  <message name="IllegalServiceArgumentException">
+    <part element="tns:IllegalServiceArgumentException" name="fault"></part>
+  </message>
+  <message name="updateManuallyEnteredFields">
+    <part element="tns:updateManuallyEnteredFields" name="parameters"></part>
+  </message>
+  <message name="createOrUpdateCorrespondenceResponse">
+    <part element="tns:createOrUpdateCorrespondenceResponse" name="parameters"></part>
+  </message>
+  <message name="createOrUpdateCorrespondence">
+    <part element="tns:createOrUpdateCorrespondence" name="parameters"></part>
+  </message>
+  <message name="updateManuallyEnteredFieldsResponse">
+    <part element="tns:updateManuallyEnteredFieldsResponse" name="parameters"></part>
+  </message>
+  <message name="updateStatusResponse">
+    <part element="tns:updateStatusResponse" name="parameters"></part>
+  </message>
+  <message name="findCorrespondenceResponse">
+    <part element="tns:findCorrespondenceResponse" name="parameters"></part>
+  </message>
+  <message name="findCorrespondence">
+    <part element="tns:findCorrespondence" name="parameters"></part>
+  </message>
+  <message name="ReadFailedException">
+    <part element="tns:ReadFailedException" name="fault"></part>
+  </message>
+  <message name="getCorrespondence">
+    <part element="tns:getCorrespondence" name="parameters"></part>
+  </message>
+  <portType name="CorrespondenceServiceStronglyTypedType">
+    <operation name="createOrUpdateCorrespondence">
+      <input message="tns:createOrUpdateCorrespondence" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/createOrUpdateCorrespondenceRequest"></input>
+      <output message="tns:createOrUpdateCorrespondenceResponse" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/createOrUpdateCorrespondenceResponse"></output>
+      <fault message="tns:IllegalServiceArgumentException" name="IllegalServiceArgumentException" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/createOrUpdateCorrespondence/Fault/IllegalServiceArgumentException"></fault>
+      <fault message="tns:UpdateFailedException" name="UpdateFailedException" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/createOrUpdateCorrespondence/Fault/UpdateFailedException"></fault>
+    </operation>
+    <operation name="updateStatus">
+      <input message="tns:updateStatus" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/updateStatusRequest"></input>
+      <output message="tns:updateStatusResponse" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/updateStatusResponse"></output>
+      <fault message="tns:IllegalServiceArgumentException" name="IllegalServiceArgumentException" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/updateStatus/Fault/IllegalServiceArgumentException"></fault>
+      <fault message="tns:UpdateFailedException" name="UpdateFailedException" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/updateStatus/Fault/UpdateFailedException"></fault>
+    </operation>
+    <operation name="updateManuallyEnteredFields">
+      <input message="tns:updateManuallyEnteredFields" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/updateManuallyEnteredFieldsRequest"></input>
+      <output message="tns:updateManuallyEnteredFieldsResponse" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/updateManuallyEnteredFieldsResponse"></output>
+      <fault message="tns:IllegalServiceArgumentException" name="IllegalServiceArgumentException" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/updateManuallyEnteredFields/Fault/IllegalServiceArgumentException"></fault>
+      <fault message="tns:UpdateFailedException" name="UpdateFailedException" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/updateManuallyEnteredFields/Fault/UpdateFailedException"></fault>
+    </operation>
+    <operation name="updateStatusAndDescription">
+      <input message="tns:updateStatusAndDescription" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/updateStatusAndDescriptionRequest"></input>
+      <output message="tns:updateStatusAndDescriptionResponse" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/updateStatusAndDescriptionResponse"></output>
+      <fault message="tns:IllegalServiceArgumentException" name="IllegalServiceArgumentException" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/updateStatusAndDescription/Fault/IllegalServiceArgumentException"></fault>
+      <fault message="tns:UpdateFailedException" name="UpdateFailedException" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/updateStatusAndDescription/Fault/UpdateFailedException"></fault>
+    </operation>
+    <operation name="findCorrespondence">
+      <input message="tns:findCorrespondence" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/findCorrespondenceRequest"></input>
+      <output message="tns:findCorrespondenceResponse" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/findCorrespondenceResponse"></output>
+      <fault message="tns:ReadFailedException" name="ReadFailedException" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/findCorrespondence/Fault/ReadFailedException"></fault>
+      <fault message="tns:IllegalServiceArgumentException" name="IllegalServiceArgumentException" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/findCorrespondence/Fault/IllegalServiceArgumentException"></fault>
+    </operation>
+    <operation name="getCorrespondence">
+      <input message="tns:getCorrespondence" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/getCorrespondenceRequest"></input>
+      <output message="tns:getCorrespondenceResponse" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/getCorrespondenceResponse"></output>
+      <fault message="tns:ReadFailedException" name="ReadFailedException" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/getCorrespondence/Fault/ReadFailedException"></fault>
+      <fault message="tns:IllegalServiceArgumentException" name="IllegalServiceArgumentException" wsam:Action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/getCorrespondence/Fault/IllegalServiceArgumentException"></fault>
+    </operation>
+  </portType>
+  <binding name="CorrespondenceServiceStronglyTypedTypePortBinding" type="tns:CorrespondenceServiceStronglyTypedType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="createOrUpdateCorrespondence">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="IllegalServiceArgumentException">
+        <soap:fault name="IllegalServiceArgumentException" use="literal"/>
+      </fault>
+      <fault name="UpdateFailedException">
+        <soap:fault name="UpdateFailedException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="updateStatus">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="IllegalServiceArgumentException">
+        <soap:fault name="IllegalServiceArgumentException" use="literal"/>
+      </fault>
+      <fault name="UpdateFailedException">
+        <soap:fault name="UpdateFailedException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="updateManuallyEnteredFields">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="IllegalServiceArgumentException">
+        <soap:fault name="IllegalServiceArgumentException" use="literal"/>
+      </fault>
+      <fault name="UpdateFailedException">
+        <soap:fault name="UpdateFailedException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="updateStatusAndDescription">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="IllegalServiceArgumentException">
+        <soap:fault name="IllegalServiceArgumentException" use="literal"/>
+      </fault>
+      <fault name="UpdateFailedException">
+        <soap:fault name="UpdateFailedException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="findCorrespondence">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="ReadFailedException">
+        <soap:fault name="ReadFailedException" use="literal"/>
+      </fault>
+      <fault name="IllegalServiceArgumentException">
+        <soap:fault name="IllegalServiceArgumentException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="getCorrespondence">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="ReadFailedException">
+        <soap:fault name="ReadFailedException" use="literal"/>
+      </fault>
+      <fault name="IllegalServiceArgumentException">
+        <soap:fault name="IllegalServiceArgumentException" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="CorrespondenceServiceStronglyTyped">
+    <port binding="tns:CorrespondenceServiceStronglyTypedTypePortBinding" name="CorrespondenceServiceStronglyTypedTypePort">
+      <soap:address location="http://172.23.9.146:9191/connector/services/classic/CorrespondenceServiceStronglyTyped"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://172.23.9.146:9191/connector/services/classic/CorrespondenceServiceStronglyTyped?xsd=CorrespondenceServiceStronglyTyped_schema1.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://healthedge.com" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://healthedge.com">
+  <xs:element name="IllegalServiceArgumentException" nillable="true" type="tns:illegalServiceArgumentInfo"/>
+  <xs:element name="ReadFailedException" nillable="true" type="tns:readFailedInfo"/>
+  <xs:element name="ResponseInfo" type="tns:responseInfo"/>
+  <xs:element name="UpdateFailedException" nillable="true" type="tns:updateFailedInfo"/>
+  <xs:element name="correspondenceSearchCriteria" type="tns:correspondenceSearchCriteria"/>
+  <xs:element name="createOrUpdateCorrespondence" type="tns:createOrUpdateCorrespondence"/>
+  <xs:element name="createOrUpdateCorrespondenceResponse" type="tns:createOrUpdateCorrespondenceResponse"/>
+  <xs:element name="findCorrespondence" nillable="true" type="tns:findCorrespondence"/>
+  <xs:element name="findCorrespondenceResponse" type="tns:findCorrespondenceResponse"/>
+  <xs:element name="getCorrespondence" nillable="true" type="tns:getCorrespondence"/>
+  <xs:element name="getCorrespondenceResponse" type="tns:getCorrespondenceResponse"/>
+  <xs:element name="updateManuallyEnteredFields" nillable="true" type="tns:updateManuallyEnteredFields"/>
+  <xs:element name="updateManuallyEnteredFieldsResponse" type="tns:updateManuallyEnteredFieldsResponse"/>
+  <xs:element name="updateStatus" nillable="true" type="tns:updateStatus"/>
+  <xs:element name="updateStatusAndDescription" nillable="true" type="tns:updateStatusAndDescription"/>
+  <xs:element name="updateStatusAndDescriptionResponse" type="tns:updateStatusAndDescriptionResponse"/>
+  <xs:element name="updateStatusResponse" type="tns:updateStatusResponse"/>
+  <xs:complexType name="createOrUpdateCorrespondence">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="statusTimeList" type="tns:correspondenceStatusTimeChange"/>
+      <xs:element minOccurs="0" name="url" type="xs:string"/>
+      <xs:element minOccurs="0" name="description" type="xs:string"/>
+      <xs:element minOccurs="0" name="definition" type="xs:string"/>
+      <xs:element minOccurs="0" name="recipient" type="tns:recipient"/>
+      <xs:element minOccurs="0" name="subject" type="tns:subject"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="manuallyEnteredFields" type="tns:correspondenceFieldValue"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="correspondenceStatusTimeChange">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correspondenceStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="setOnTime" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="recipient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hccId" type="xs:string"/>
+      <xs:element minOccurs="0" name="recipientType" type="tns:reciepientType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hccId" type="xs:string"/>
+      <xs:element minOccurs="0" name="subjectType" type="tns:subjectType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="correspondenceFieldValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="value" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createOrUpdateCorrespondenceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="response" type="tns:responseInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="responseInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="id" type="xs:string"/>
+      <xs:element minOccurs="0" name="errorMessage" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateFailedInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="causeExceptionMessage" type="xs:string"/>
+      <xs:element minOccurs="0" name="causeExceptionType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="illegalServiceArgumentInfo">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="parameterNames" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="parameterValues" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateManuallyEnteredFields">
+    <xs:sequence>
+      <xs:element name="correspondenceId" type="xs:long"/>
+      <xs:element name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="w3cSentTime" type="xs:string"/>
+      <xs:element name="description" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" name="manuallyEnteredFields" type="tns:correspondenceFieldValue"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateManuallyEnteredFieldsResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="updateStatusAndDescription">
+    <xs:sequence>
+      <xs:element name="correspondenceId" type="xs:long"/>
+      <xs:element name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="w3cSentTime" type="xs:string"/>
+      <xs:element name="description" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateStatusAndDescriptionResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="getCorrespondence">
+    <xs:sequence>
+      <xs:element name="correspondenceId" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCorrespondenceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correspondence" type="tns:correspondenceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="correspondenceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="statusTimeList" nillable="true" type="tns:correspondenceStatusTimeChange"/>
+      <xs:element minOccurs="0" name="url" type="xs:string"/>
+      <xs:element minOccurs="0" name="description" type="xs:string"/>
+      <xs:element minOccurs="0" name="definition" type="xs:string"/>
+      <xs:element minOccurs="0" name="recipient" type="tns:recipient"/>
+      <xs:element minOccurs="0" name="subject" type="tns:subject"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="manuallyEnteredFields" nillable="true" type="tns:correspondenceFieldValue"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="readFailedInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="causeExceptionMessage" type="xs:string"/>
+      <xs:element minOccurs="0" name="causeExceptionType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateStatus">
+    <xs:sequence>
+      <xs:element name="correspondenceId" type="xs:long"/>
+      <xs:element name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="w3cSentTime" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateStatusResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="findCorrespondence">
+    <xs:sequence>
+      <xs:element name="correspondenceSearchCriteria" type="tns:correspondenceSearchCriteria"/>
+      <xs:element name="maxRows" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="correspondenceSearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="recipientType" type="xs:string"/>
+      <xs:element minOccurs="0" name="recipientValue" type="xs:string"/>
+      <xs:element minOccurs="0" name="currentStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="correspondenceDefinition" type="xs:string"/>
+      <xs:element minOccurs="0" name="startDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="endDate" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findCorrespondenceResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="correspondenceId" nillable="true" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="reciepientType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Account"/>
+      <xs:enumeration value="Practitioner"/>
+      <xs:enumeration value="Supplier"/>
+      <xs:enumeration value="Membership"/>
+      <xs:enumeration value="Broker"/>
+      <xs:enumeration value="UserAccount"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="subjectType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Bill"/>
+      <xs:enumeration value="ConsolidatedClaim"/>
+      <xs:enumeration value="Payment"/>
+      <xs:enumeration value="Membership"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://172.23.9.146:9191/connector/services/classic/CorrespondenceServiceStronglyTyped</con:endpoint></con:endpoints><con:operation id="6937d887-847c-4fbf-964a-a2dfdaeafc10" isOneWay="false" action="" name="createOrUpdateCorrespondence" bindingOperationName="createOrUpdateCorrespondence" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3efd54b3-57c0-4ee4-a494-20fea5724bf2" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://172.23.9.150:9191/connector/services/classic/CorrespondenceServiceStronglyTyped</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:heal="http://healthedge.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <heal:createOrUpdateCorrespondence>\r
+         <id>17836</id>\r
+         <url>https://www-test.mpxpp.com/direct/7004/azl8jMYf2xvoQlKB53q0000033964001</url>\r
+         <statusTimeList>\r
+            <correspondenceStatus>s</correspondenceStatus>\r
+            <setOnTime>2017-12-14 11:34:48</setOnTime>\r
+         </statusTimeList>\r
+      </heal:createOrUpdateCorrespondence>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>integration</con:username><con:password>vE5WfCEQSh5</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/createOrUpdateCorrespondenceRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="5bcbf5ec-7add-4fe0-8e52-b4061315c2c4" isOneWay="false" action="" name="findCorrespondence" bindingOperationName="findCorrespondence" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="79c622fb-77e4-4566-93e0-ffce713f8b50" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://172.23.9.146:9191/connector/services/classic/CorrespondenceServiceStronglyTyped</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:heal="http://healthedge.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <heal:findCorrespondence>\r
+         <correspondenceSearchCriteria>\r
+            <!--Optional:-->\r
+            <recipientType>?</recipientType>\r
+            <!--Optional:-->\r
+            <recipientValue>?</recipientValue>\r
+            <!--Optional:-->\r
+            <currentStatus>?</currentStatus>\r
+            <!--Optional:-->\r
+            <correspondenceDefinition>?</correspondenceDefinition>\r
+            <!--Optional:-->\r
+            <startDate>?</startDate>\r
+            <!--Optional:-->\r
+            <endDate>?</endDate>\r
+         </correspondenceSearchCriteria>\r
+         <maxRows>?</maxRows>\r
+      </heal:findCorrespondence>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/findCorrespondenceRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="7d67491a-26e8-4f6f-86e7-4b1b983d8290" isOneWay="false" action="" name="getCorrespondence" bindingOperationName="getCorrespondence" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="95d9a3e8-a256-4a14-b277-95d87c0e41c1" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://172.23.9.150:9191/connector/services/classic/CorrespondenceServiceStronglyTyped</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:heal="http://healthedge.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <heal:getCorrespondence>\r
+         <correspondenceId>17442</correspondenceId>\r
+      </heal:getCorrespondence>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>integration</con:username><con:password>vE5WfCEQSh5</con:password><con:domain/><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/getCorrespondenceRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="e9c8f24d-5ce2-4b57-828c-7340b3ccf571" isOneWay="false" action="" name="updateManuallyEnteredFields" bindingOperationName="updateManuallyEnteredFields" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1fa1b958-b86f-406d-a3c4-2cffe2d6854e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://172.23.9.146:9191/connector/services/classic/CorrespondenceServiceStronglyTyped</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:heal="http://healthedge.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <heal:updateManuallyEnteredFields>\r
+         <correspondenceId>?</correspondenceId>\r
+         <status>?</status>\r
+         <!--Optional:-->\r
+         <w3cSentTime>?</w3cSentTime>\r
+         <description>?</description>\r
+         <!--1 or more repetitions:-->\r
+         <manuallyEnteredFields>\r
+            <!--Optional:-->\r
+            <name>?</name>\r
+            <!--Optional:-->\r
+            <value>?</value>\r
+         </manuallyEnteredFields>\r
+      </heal:updateManuallyEnteredFields>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/updateManuallyEnteredFieldsRequest"/></con:call></con:operation><con:operation id="d44378b3-f66d-4fc6-a790-5d17d6134158" isOneWay="false" action="" name="updateStatus" bindingOperationName="updateStatus" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b2cb8075-71b8-4eff-999d-a7f0135e76f9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://172.23.9.146:9191/connector/services/classic/CorrespondenceServiceStronglyTyped</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:heal="http://healthedge.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <heal:updateStatus>\r
+         <correspondenceId>?</correspondenceId>\r
+         <status>?</status>\r
+         <!--Optional:-->\r
+         <w3cSentTime>?</w3cSentTime>\r
+      </heal:updateStatus>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/updateStatusRequest"/></con:call></con:operation><con:operation id="59ac6a5c-ce2d-48d2-902b-39b9735e3f3a" isOneWay="false" action="" name="updateStatusAndDescription" bindingOperationName="updateStatusAndDescription" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="078ebf20-928e-4375-9b4a-00786c5ac70a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://172.23.9.146:9191/connector/services/classic/CorrespondenceServiceStronglyTyped</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:heal="http://healthedge.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <heal:updateStatusAndDescription>\r
+         <correspondenceId>?</correspondenceId>\r
+         <status>?</status>\r
+         <!--Optional:-->\r
+         <w3cSentTime>?</w3cSentTime>\r
+         <description>?</description>\r
+      </heal:updateStatusAndDescription>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://healthedge.com/CorrespondenceServiceStronglyTypedType/updateStatusAndDescriptionRequest"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<authorizationIBRequestRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.ust-global.com/schema/authorization">
+  <header xmlns="http://www.ust-global.com/schema/common">
+    <totalRecordCount xmlns="">1</totalRecordCount>
+    <fileCreationDate xmlns="">2019-04-06T00:00:07.1890071Z</fileCreationDate>
+    <correlationId xmlns="">ae80c53e-6228-46d1-a41e-00d9140637f0</correlationId>
+  </header>
+  <authorizationIBRequest>
+    <authorizationSubmitRequestRecordList>
+      <recordCount>1</recordCount>
+      <authorizationSubmitRequestRecord>
+        <recordId>D190405001</recordId>
+        <serviceAuthorization xmlns="http://www.healthedge.com/connector/schema/authorization">
+          <recordType xmlns="">Authorization</recordType>
+          <authorizationId xmlns="">D190405001</authorizationId>
+          <externalAuthorizationId xmlns="">D190405001</externalAuthorizationId>
+          <authorizationStatus xmlns="">APPROVED</authorizationStatus>
+          <maintenanceInfo xmlns="">
+            <transactionType>Create</transactionType>
+            <overrideAction>false</overrideAction>
+          </maintenanceInfo>
+          <inputSource xmlns="">1</inputSource>
+          <requestedAdmitStatusCode xmlns="">OUTPATIENT</requestedAdmitStatusCode>
+          <patientTrackingNumber xmlns="">420146130001</patientTrackingNumber>
+          <requestingProvider xmlns="">
+            <providerType>PRACTITIONER</providerType>
+            <providerNPIId>1598793762</providerNPIId>
+            <organizationName>Elizabeth Wall</organizationName>
+          </requestingProvider>
+          <admissionInformation xmlns="" />
+          <services xmlns="">
+            <startServiceDate>2019-04-05</startServiceDate>
+            <endServiceDate>2019-07-04</endServiceDate>
+            <serviceSetStatus>APPROVED</serviceSetStatus>
+            <approvedQuantity>1</approvedQuantity>
+            <approvedUnits>units</approvedUnits>
+            <renderingProvider>
+              <providerType>SUPPLIER_LOCATION</providerType>
+              <providerNPIId>1609858729</providerNPIId>
+              <organizationName>Edgepark Medical Supplies</organizationName>
+            </renderingProvider>
+            <serviceType>
+              <serviceCode>A9276</serviceCode>
+              <serviceCodeType>HCPCS</serviceCodeType>
+            </serviceType>
+            <diagnosis>
+              <diagnosisCode>E10.9</diagnosisCode>
+              <diagnosisCodeType>ICD_10</diagnosisCodeType>
+            </diagnosis>
+            <diagnosis>
+              <diagnosisCode>Z79.4</diagnosisCode>
+              <diagnosisCodeType>ICD_10</diagnosisCodeType>
+            </diagnosis>
+            <hicApproval>
+              <authorizedDate>2019-04-05</authorizedDate>
+              <authorizedByExternalUser>
+                <codeSetName>ServiceAuthExternalUser</codeSetName>
+                <shortName>Essette</shortName>
+              </authorizedByExternalUser>
+            </hicApproval>
+            <authorizationTypeCode>3</authorizationTypeCode>
+          </services>
+          <memberMatchInput xmlns="">
+            <memberMatchInput>
+              <definitionName>MemberMatchDefinition</definitionName>
+              <id>420146130001</id>
+            </memberMatchInput>
+          </memberMatchInput>
+        </serviceAuthorization>
+      </authorizationSubmitRequestRecord>
+    </authorizationSubmitRequestRecordList>
+  </authorizationIBRequest>
+</authorizationIBRequestRoot>

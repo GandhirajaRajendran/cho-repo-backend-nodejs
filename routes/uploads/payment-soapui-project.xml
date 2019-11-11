@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="b67774be-c196-40cd-a7a7-940afb983fa1" activeEnvironment="Default" name="payment" resourceRoot="" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="ea4f7988-059d-4e6e-8acd-9677b745fb2f" wsaVersion="NONE" name="PaymentServiceStronglyTypedTypePortBinding" type="wsdl" bindingName="{http://healthedge.com}PaymentServiceStronglyTypedTypePortBinding" soapVersion="1_1" anonymous="optional" definition="http://172.23.9.141:9191/connector/services/classic/PaymentServiceStronglyTyped?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://172.23.9.141:9191/connector/services/classic/PaymentServiceStronglyTyped?wsdl"><con:part><con:url>http://172.23.9.141:9191/connector/services/classic/PaymentServiceStronglyTyped?wsdl</con:url><con:content><![CDATA[<definitions name="PaymentServiceStronglyTyped" targetNamespace="http://healthedge.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://healthedge.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://healthedge.com" schemaLocation="http://172.23.9.141:9191/connector/services/classic/PaymentServiceStronglyTyped?xsd=PaymentServiceStronglyTyped_schema1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="findPaymentsResponse">
+    <part element="tns:findPaymentsResponse" name="parameters"></part>
+  </message>
+  <message name="IllegalServiceArgumentException">
+    <part element="tns:IllegalServiceArgumentException" name="fault"></part>
+  </message>
+  <message name="PaymentNotFoundException">
+    <part element="tns:PaymentNotFoundException" name="fault"></part>
+  </message>
+  <message name="updatePaymentStatus">
+    <part element="tns:updatePaymentStatus" name="parameters"></part>
+  </message>
+  <message name="updatePaymentStatusResponse">
+    <part element="tns:updatePaymentStatusResponse" name="parameters"></part>
+  </message>
+  <message name="UpdateFailedException">
+    <part element="tns:UpdateFailedException" name="fault"></part>
+  </message>
+  <message name="getPaymentDetailsByIDResponse">
+    <part element="tns:getPaymentDetailsByIDResponse" name="parameters"></part>
+  </message>
+  <message name="ReadFailedException">
+    <part element="tns:ReadFailedException" name="fault"></part>
+  </message>
+  <message name="findPayments">
+    <part element="tns:findPayments" name="parameters"></part>
+  </message>
+  <message name="getPaymentDetailsByID">
+    <part element="tns:getPaymentDetailsByID" name="parameters"></part>
+  </message>
+  <portType name="PaymentServiceStronglyTypedType">
+    <operation name="getPaymentDetailsByID">
+      <input message="tns:getPaymentDetailsByID" wsam:Action="http://healthedge.com/PaymentServiceStronglyTypedType/getPaymentDetailsByIDRequest"></input>
+      <output message="tns:getPaymentDetailsByIDResponse" wsam:Action="http://healthedge.com/PaymentServiceStronglyTypedType/getPaymentDetailsByIDResponse"></output>
+      <fault message="tns:ReadFailedException" name="ReadFailedException" wsam:Action="http://healthedge.com/PaymentServiceStronglyTypedType/getPaymentDetailsByID/Fault/ReadFailedException"></fault>
+      <fault message="tns:IllegalServiceArgumentException" name="IllegalServiceArgumentException" wsam:Action="http://healthedge.com/PaymentServiceStronglyTypedType/getPaymentDetailsByID/Fault/IllegalServiceArgumentException"></fault>
+    </operation>
+    <operation name="updatePaymentStatus">
+      <input message="tns:updatePaymentStatus" wsam:Action="http://healthedge.com/PaymentServiceStronglyTypedType/updatePaymentStatusRequest"></input>
+      <output message="tns:updatePaymentStatusResponse" wsam:Action="http://healthedge.com/PaymentServiceStronglyTypedType/updatePaymentStatusResponse"></output>
+      <fault message="tns:IllegalServiceArgumentException" name="IllegalServiceArgumentException" wsam:Action="http://healthedge.com/PaymentServiceStronglyTypedType/updatePaymentStatus/Fault/IllegalServiceArgumentException"></fault>
+      <fault message="tns:PaymentNotFoundException" name="PaymentNotFoundException" wsam:Action="http://healthedge.com/PaymentServiceStronglyTypedType/updatePaymentStatus/Fault/PaymentNotFoundException"></fault>
+      <fault message="tns:UpdateFailedException" name="UpdateFailedException" wsam:Action="http://healthedge.com/PaymentServiceStronglyTypedType/updatePaymentStatus/Fault/UpdateFailedException"></fault>
+    </operation>
+    <operation name="findPayments">
+      <input message="tns:findPayments" wsam:Action="http://healthedge.com/PaymentServiceStronglyTypedType/findPaymentsRequest"></input>
+      <output message="tns:findPaymentsResponse" wsam:Action="http://healthedge.com/PaymentServiceStronglyTypedType/findPaymentsResponse"></output>
+      <fault message="tns:ReadFailedException" name="ReadFailedException" wsam:Action="http://healthedge.com/PaymentServiceStronglyTypedType/findPayments/Fault/ReadFailedException"></fault>
+      <fault message="tns:IllegalServiceArgumentException" name="IllegalServiceArgumentException" wsam:Action="http://healthedge.com/PaymentServiceStronglyTypedType/findPayments/Fault/IllegalServiceArgumentException"></fault>
+    </operation>
+  </portType>
+  <binding name="PaymentServiceStronglyTypedTypePortBinding" type="tns:PaymentServiceStronglyTypedType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getPaymentDetailsByID">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="ReadFailedException">
+        <soap:fault name="ReadFailedException" use="literal"/>
+      </fault>
+      <fault name="IllegalServiceArgumentException">
+        <soap:fault name="IllegalServiceArgumentException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="updatePaymentStatus">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="IllegalServiceArgumentException">
+        <soap:fault name="IllegalServiceArgumentException" use="literal"/>
+      </fault>
+      <fault name="PaymentNotFoundException">
+        <soap:fault name="PaymentNotFoundException" use="literal"/>
+      </fault>
+      <fault name="UpdateFailedException">
+        <soap:fault name="UpdateFailedException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="findPayments">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="ReadFailedException">
+        <soap:fault name="ReadFailedException" use="literal"/>
+      </fault>
+      <fault name="IllegalServiceArgumentException">
+        <soap:fault name="IllegalServiceArgumentException" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="PaymentServiceStronglyTyped">
+    <port binding="tns:PaymentServiceStronglyTypedTypePortBinding" name="PaymentServiceStronglyTypedTypePort">
+      <soap:address location="http://172.23.9.141:9191/connector/services/classic/PaymentServiceStronglyTyped"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://172.23.9.141:9191/connector/services/classic/PaymentServiceStronglyTyped?xsd=PaymentServiceStronglyTyped_schema1.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://healthedge.com" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://healthedge.com">
+  <xs:element name="IllegalServiceArgumentException" nillable="true" type="tns:illegalServiceArgumentInfo"/>
+  <xs:element name="PaymentNotFoundException" nillable="true" type="tns:paymentFaultInfo"/>
+  <xs:element name="PaymentStatusSearchCriteria" type="tns:paymentStatusSearchCriteria"/>
+  <xs:element name="ReadFailedException" nillable="true" type="tns:readFailedInfo"/>
+  <xs:element name="UpdateFailedException" nillable="true" type="tns:updateFailedInfo"/>
+  <xs:element name="extractPayload" type="tns:extractPayload"/>
+  <xs:element name="findPayments" nillable="true" type="tns:findPayments"/>
+  <xs:element name="findPaymentsResponse" type="tns:findPaymentsResponse"/>
+  <xs:element name="getPaymentDetailsByID" nillable="true" type="tns:getPaymentDetailsByID"/>
+  <xs:element name="getPaymentDetailsByIDResponse" type="tns:getPaymentDetailsByIDResponse"/>
+  <xs:element name="paymentSearchCriteria" type="tns:paymentSearchCriteria"/>
+  <xs:element name="updatePaymentStatus" nillable="true" type="tns:updatePaymentStatus"/>
+  <xs:element name="updatePaymentStatusResponse" type="tns:updatePaymentStatusResponse"/>
+  <xs:complexType name="updatePaymentStatus">
+    <xs:sequence>
+      <xs:element name="criteria" type="tns:paymentStatusSearchCriteria"/>
+      <xs:element minOccurs="0" name="w3cReconciliationDate" type="xs:string"/>
+      <xs:element name="action" type="xs:string"/>
+      <xs:element name="auditLogInfo" type="tns:auditLogInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="paymentStatusSearchCriteria">
+    <xs:sequence>
+      <xs:element name="bankAssociationNumber" type="xs:string"/>
+      <xs:element name="bankAccountNumber" type="xs:string"/>
+      <xs:element name="checkNumber" type="xs:int"/>
+      <xs:element name="checkAmount" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="auditLogInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comment" type="xs:string"/>
+      <xs:element name="messageCode" type="xs:string"/>
+      <xs:element name="messageDescription" type="xs:string"/>
+      <xs:element minOccurs="0" name="user" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updatePaymentStatusResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="updatedPaymentInformation" type="tns:updatedPaymentInformation"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updatedPaymentInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cvcId" type="xs:long"/>
+      <xs:element minOccurs="0" name="newStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="originalStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="paymentIdentifier" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="illegalServiceArgumentInfo">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="parameterNames" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="parameterValues" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="paymentFaultInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="paymentId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateFailedInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="causeExceptionMessage" type="xs:string"/>
+      <xs:element minOccurs="0" name="causeExceptionType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findPayments">
+    <xs:sequence>
+      <xs:element name="criteria" type="tns:paymentSearchCriteria"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="paymentSearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bankAccountName" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankName" type="xs:string"/>
+      <xs:element minOccurs="0" name="paymentStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="payableType" type="xs:string"/>
+      <xs:element minOccurs="0" name="paymentBatchNumber" type="xs:long"/>
+      <xs:element minOccurs="0" name="paymentNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="paymentNumberRangeStart" type="xs:int"/>
+      <xs:element minOccurs="0" name="paymentNumberRangeEnd" type="xs:int"/>
+      <xs:element minOccurs="0" name="paymentDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="paymentDateRangeStart" type="xs:string"/>
+      <xs:element minOccurs="0" name="paymentDateRangeEnd" type="xs:string"/>
+      <xs:element minOccurs="0" name="supplierHccIdentifier" type="xs:string"/>
+      <xs:element minOccurs="0" name="supplierName" type="xs:string"/>
+      <xs:element minOccurs="0" name="supplierLocationHccIdentifier" type="xs:string"/>
+      <xs:element minOccurs="0" name="supplierLocationName" type="xs:string"/>
+      <xs:element minOccurs="0" name="memberHccIdentifier" type="xs:string"/>
+      <xs:element minOccurs="0" name="memberLastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="memberFirstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="brokerHccIdentifier" type="xs:string"/>
+      <xs:element minOccurs="0" name="brokerName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lienHolderHccIdentifier" type="xs:string"/>
+      <xs:element minOccurs="0" name="lienHolderName" type="xs:string"/>
+      <xs:element minOccurs="0" name="payeeType" type="tns:payeeType"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="remittanceType" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="paymentType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findPaymentsResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="paymentId" nillable="true" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="readFailedInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="causeExceptionMessage" type="xs:string"/>
+      <xs:element minOccurs="0" name="causeExceptionType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPaymentDetailsByID">
+    <xs:sequence>
+      <xs:element name="paymentId" type="xs:long"/>
+      <xs:element minOccurs="0" name="paymentFilter" type="tns:paymentFilter"/>
+      <xs:element minOccurs="0" name="paymentDetailFlags" type="tns:paymentDetailFlags"/>
+      <xs:element minOccurs="0" name="claimDetailFlags" type="tns:claimDetailFlags"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="paymentFilter">
+    <xs:sequence>
+      <xs:element name="includeAllPreviouslyPaid" type="xs:boolean"/>
+      <xs:element name="includeReversedClaimHeader" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="paymentDetailFlags">
+    <xs:sequence>
+      <xs:element name="includeAccount" type="xs:boolean"/>
+      <xs:element name="includeAdjustments" type="xs:boolean"/>
+      <xs:element name="includeBankAccount" type="xs:boolean"/>
+      <xs:element name="includeBroker" type="xs:boolean"/>
+      <xs:element name="includeBrokerBonus" type="xs:boolean"/>
+      <xs:element name="includeBrokerCommission" type="xs:boolean"/>
+      <xs:element name="includeClaimDetail" type="xs:boolean"/>
+      <xs:element name="includeLienHolder" type="xs:boolean"/>
+      <xs:element name="includeMember" type="xs:boolean"/>
+      <xs:element name="includePaymentCycle" type="xs:boolean"/>
+      <xs:element name="includeProduct" type="xs:boolean"/>
+      <xs:element name="includeReceivable" type="xs:boolean"/>
+      <xs:element name="includeSupplier" type="xs:boolean"/>
+      <xs:element name="includeSupplierLocation" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="claimDetailFlags">
+    <xs:sequence>
+      <xs:element name="includeAccounts" type="xs:boolean"/>
+      <xs:element name="includeAccumulators" type="xs:boolean"/>
+      <xs:element name="includeBenefitNetwork" type="xs:boolean"/>
+      <xs:element name="includeBenefitPlan" type="xs:boolean"/>
+      <xs:element name="includeExternalRepricerResult" type="xs:boolean"/>
+      <xs:element name="includeFundedAccounts" type="xs:boolean"/>
+      <xs:element name="includeIngenixExternalLineResult" type="xs:boolean"/>
+      <xs:element name="includePractitioner" type="xs:boolean"/>
+      <xs:element name="includeProcedureInformation" type="xs:boolean"/>
+      <xs:element name="includeProduct" type="xs:boolean"/>
+      <xs:element name="includeReportingCategories" type="xs:boolean"/>
+      <xs:element name="includeReportingCategoriesDescription" type="xs:boolean"/>
+      <xs:element name="includeRepricerName" type="xs:boolean"/>
+      <xs:element name="includeSupplier" type="xs:boolean"/>
+      <xs:element name="includeSupplierInvoice" type="xs:boolean"/>
+      <xs:element name="includeSupplierLocation" type="xs:boolean"/>
+      <xs:element name="includeWithholding" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPaymentDetailsByIDResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="paymentDetails" type="tns:extractPayload"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="extractPayload">
+    <xs:sequence>
+      <xs:any namespace="##other" processContents="skip"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="payeeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Supplier"/>
+      <xs:enumeration value="Membership"/>
+      <xs:enumeration value="Broker"/>
+      <xs:enumeration value="LienHolder"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://172.23.9.141:9191/connector/services/classic/PaymentServiceStronglyTyped</con:endpoint></con:endpoints><con:operation id="e6b95a14-18de-4729-81ac-ec0afff644b9" isOneWay="false" action="" name="findPayments" bindingOperationName="findPayments" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a9b8e5af-5d75-4215-8d69-4422101212f2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://172.23.9.141:9191/connector/services/classic/PaymentServiceStronglyTyped</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:heal="http://healthedge.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <heal:findPayments>\r
+         <criteria>\r
+            <!--Optional:-->\r
+            <bankAccountName>?</bankAccountName>\r
+            <!--Optional:-->\r
+            <bankName>?</bankName>\r
+            <!--Optional:-->\r
+            <paymentStatus>?</paymentStatus>\r
+            <!--Optional:-->\r
+            <payableType>?</payableType>\r
+            <!--Optional:-->\r
+            <paymentBatchNumber>?</paymentBatchNumber>\r
+            <!--Optional:-->\r
+            <paymentNumber>?</paymentNumber>\r
+            <!--Optional:-->\r
+            <paymentNumberRangeStart>?</paymentNumberRangeStart>\r
+            <!--Optional:-->\r
+            <paymentNumberRangeEnd>?</paymentNumberRangeEnd>\r
+            <!--Optional:-->\r
+            <paymentDate>?</paymentDate>\r
+            <!--Optional:-->\r
+            <paymentDateRangeStart>?</paymentDateRangeStart>\r
+            <!--Optional:-->\r
+            <paymentDateRangeEnd>?</paymentDateRangeEnd>\r
+            <!--Optional:-->\r
+            <supplierHccIdentifier>?</supplierHccIdentifier>\r
+            <!--Optional:-->\r
+            <supplierName>?</supplierName>\r
+            <!--Optional:-->\r
+            <supplierLocationHccIdentifier>?</supplierLocationHccIdentifier>\r
+            <!--Optional:-->\r
+            <supplierLocationName>?</supplierLocationName>\r
+            <!--Optional:-->\r
+            <memberHccIdentifier>?</memberHccIdentifier>\r
+            <!--Optional:-->\r
+            <memberLastName>?</memberLastName>\r
+            <!--Optional:-->\r
+            <memberFirstName>?</memberFirstName>\r
+            <!--Optional:-->\r
+            <brokerHccIdentifier>?</brokerHccIdentifier>\r
+            <!--Optional:-->\r
+            <brokerName>?</brokerName>\r
+            <!--Optional:-->\r
+            <lienHolderHccIdentifier>?</lienHolderHccIdentifier>\r
+            <!--Optional:-->\r
+            <lienHolderName>?</lienHolderName>\r
+            <!--Optional:-->\r
+            <payeeType>?</payeeType>\r
+            <!--Zero or more repetitions:-->\r
+            <remittanceType>?</remittanceType>\r
+            <!--Optional:-->\r
+            <paymentType>?</paymentType>\r
+         </criteria>\r
+      </heal:findPayments>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://healthedge.com/PaymentServiceStronglyTypedType/findPaymentsRequest"/></con:call></con:operation><con:operation id="0802918a-640e-4526-b5c6-c05f4be87a3a" isOneWay="false" action="" name="getPaymentDetailsByID" bindingOperationName="getPaymentDetailsByID" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="03eaaa19-8969-4d95-82bf-11c71a2e2f62" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://172.23.9.141:9191/connector/services/classic/PaymentServiceStronglyTyped</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:heal="http://healthedge.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <heal:getPaymentDetailsByID>\r
+         <paymentId>?</paymentId>\r
+         <!--Optional:-->\r
+         <paymentFilter>\r
+            <includeAllPreviouslyPaid>?</includeAllPreviouslyPaid>\r
+            <includeReversedClaimHeader>?</includeReversedClaimHeader>\r
+         </paymentFilter>\r
+         <!--Optional:-->\r
+         <paymentDetailFlags>\r
+            <includeAccount>?</includeAccount>\r
+            <includeAdjustments>?</includeAdjustments>\r
+            <includeBankAccount>?</includeBankAccount>\r
+            <includeBroker>?</includeBroker>\r
+            <includeBrokerBonus>?</includeBrokerBonus>\r
+            <includeBrokerCommission>?</includeBrokerCommission>\r
+            <includeClaimDetail>?</includeClaimDetail>\r
+            <includeLienHolder>?</includeLienHolder>\r
+            <includeMember>?</includeMember>\r
+            <includePaymentCycle>?</includePaymentCycle>\r
+            <includeProduct>?</includeProduct>\r
+            <includeReceivable>?</includeReceivable>\r
+            <includeSupplier>?</includeSupplier>\r
+            <includeSupplierLocation>?</includeSupplierLocation>\r
+         </paymentDetailFlags>\r
+         <!--Optional:-->\r
+         <claimDetailFlags>\r
+            <includeAccounts>?</includeAccounts>\r
+            <includeAccumulators>?</includeAccumulators>\r
+            <includeBenefitNetwork>?</includeBenefitNetwork>\r
+            <includeBenefitPlan>?</includeBenefitPlan>\r
+            <includeExternalRepricerResult>?</includeExternalRepricerResult>\r
+            <includeFundedAccounts>?</includeFundedAccounts>\r
+            <includeIngenixExternalLineResult>?</includeIngenixExternalLineResult>\r
+            <includePractitioner>?</includePractitioner>\r
+            <includeProcedureInformation>?</includeProcedureInformation>\r
+            <includeProduct>?</includeProduct>\r
+            <includeReportingCategories>?</includeReportingCategories>\r
+            <includeReportingCategoriesDescription>?</includeReportingCategoriesDescription>\r
+            <includeRepricerName>?</includeRepricerName>\r
+            <includeSupplier>?</includeSupplier>\r
+            <includeSupplierInvoice>?</includeSupplierInvoice>\r
+            <includeSupplierLocation>?</includeSupplierLocation>\r
+            <includeWithholding>?</includeWithholding>\r
+         </claimDetailFlags>\r
+      </heal:getPaymentDetailsByID>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://healthedge.com/PaymentServiceStronglyTypedType/getPaymentDetailsByIDRequest"/></con:call></con:operation><con:operation id="7e2dfcb6-b398-4cd4-baf6-537df81a1f47" isOneWay="false" action="" name="updatePaymentStatus" bindingOperationName="updatePaymentStatus" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d2d6a8e8-7a16-4874-8d06-edac6eae49bf" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://172.23.9.141:9191/connector/services/classic/PaymentServiceStronglyTyped</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:heal="http://healthedge.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <heal:updatePaymentStatus>\r
+         <criteria>\r
+            <bankAssociationNumber>011200608</bankAssociationNumber>\r
+            <bankAccountNumber>199681023677</bankAccountNumber>\r
+            <checkNumber>14191</checkNumber>\r
+            <checkAmount>605.50</checkAmount>\r
+         </criteria>\r
+         <!--Optional:-->\r
+         <action>Clear</action>\r
+         <auditLogInfo>\r
+            <!--Optional:-->\r
+            <comment>CHK NUMBER: 541248</comment>\r
+            <messageCode>10</messageCode>\r
+            <messageDescription>Approve cleared check</messageDescription>\r
+            <!--Optional:-->\r
+            <user>?</user>\r
+         </auditLogInfo>\r
+      </heal:updatePaymentStatus>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>JRamakrishnan</con:username><con:password>jishnu@123</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://healthedge.com/PaymentServiceStronglyTypedType/updatePaymentStatusRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
